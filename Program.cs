@@ -72,7 +72,10 @@ namespace StudentExercisesApp
                 Console.WriteLine($"{instructor.FirstName} {instructor.LastName} is in {instructor.Cohort.Name}");
             }
 
+            Pause();
 
+            
+            
         }
           public static void Pause()
         {

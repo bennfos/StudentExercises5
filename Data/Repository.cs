@@ -164,6 +164,28 @@ namespace StudentExercisesApp.Data
             }
         }
 
+        public void AssignExercise(Student student, Exercise exercise)
+        {
+
+            using (SqlConnection conn = Connection)
+            {
+
+                conn.Open();
+
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+
+                    cmd.CommandText = "INSERT INTO Student_Exercises (StudentId, ExerciseId) VALUES (@studentId, @exerciseId)";
+                    cmd.Parameters.Add(new SqlParameter("@studentId", student.Id));
+                    cmd.Parameters.Add(new SqlParameter("@exerciseId", exercise.Id));
+                    
+
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+        }
+
 
     }
 }

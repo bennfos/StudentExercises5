@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace StudentExercisesApp.Models
 {
     // C# representation of the Employee table
@@ -5,6 +7,8 @@ namespace StudentExercisesApp.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
+
+        public List<Student> students { get; set; } = new List<Student>();
      
     }
 }

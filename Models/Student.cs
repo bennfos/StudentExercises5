@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace StudentExercisesApp.Models
 {
     // C# representation of the Employee table
@@ -14,5 +16,8 @@ namespace StudentExercisesApp.Models
         public int CohortId { get; set; }
 
         public Cohort Cohort { get; set; }
+
+        public List<Exercise> Exercises { get; set; } = new List<Exercise>();
+
     }
 }
